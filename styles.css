@@ -254,6 +254,60 @@ tbody tr:last-child td {
   border-bottom: 0;
 }
 
+.tutorial {
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.tutorial-header {
+  margin-bottom: 16px;
+}
+
+.tutorial-header h2 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+.tutorial-steps {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tutorial-step {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.6fr);
+  gap: 18px;
+  align-items: start;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.step-text h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.step-text p {
+  font-size: 0.94rem;
+}
+
+.tutorial-step img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  object-position: top left;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
 @media (max-width: 760px) {
   main {
     width: min(100% - 24px, 1180px);
@@ -266,5 +320,13 @@ tbody tr:last-child td {
 
   .field {
     min-height: 300px;
+  }
+
+  .tutorial-step {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-step img {
+    max-height: 280px;
   }
 }

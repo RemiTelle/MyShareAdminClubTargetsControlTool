@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSV budsjettkontroll</title>
+  <title>MyShare admin bidragsplan kontroll</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header>
       <h1>MyShare admin bidragsplan kontroll</h1>
-      <a href="https://github.com/RemiTelle/MyShareAdminClubTargetsControlTool" target="_blank" rel="noopener noreferrer">Source code & tutorial</a>
     </header>
 
     <section class="input-grid" aria-label="Datainput">
@@ -58,6 +57,47 @@
           </tbody>
         </table>
       </div>
+    </section>
+
+    <section class="tutorial" aria-labelledby="tutorialTitle">
+      <div class="tutorial-header">
+        <h2 id="tutorialTitle">Slik bruker du verktøyet</h2>
+        <p>Last ned de to CSV-filene, lim inn innholdet i feltene over, og velg hvilken sammenligning du vil kjøre.</p>
+      </div>
+
+      <ol class="tutorial-steps">
+        <li class="tutorial-step">
+          <div class="step-text">
+            <h3>1. Last ned camp påmeldinger</h3>
+            <p>Åpne camp påmeldinger og last ned CSV-filen for campene du vil kontrollere.</p>
+          </div>
+          <img src="booking.PNG" alt="Eksport av camp påmeldinger">
+        </li>
+
+        <li class="tutorial-step">
+          <div class="step-text">
+            <h3>2. Last ned MyShare status</h3>
+            <p>Åpne MyShare status og last ned Excel-filen med klubbmedlemsstatus.</p>
+          </div>
+          <img src="myshare.PNG" alt="Eksport av MyShare status">
+        </li>
+
+        <li class="tutorial-step">
+          <div class="step-text">
+            <h3>3. Lagre Excel-filen som CSV</h3>
+            <p>I Excel velger du CSV UTF-8 som filtype når du lagrer MyShare-filen.</p>
+          </div>
+          <img src="save.PNG" alt="Lagre som CSV UTF-8 i Excel">
+        </li>
+
+        <li class="tutorial-step">
+          <div class="step-text">
+            <h3>4. Lim inn og sammenlign</h3>
+            <p>Åpne CSV-filene, kopier innholdet og lim det inn i hvert sitt felt. Kjør deretter ønsket sammenligning.</p>
+          </div>
+          <img src="example.PNG" alt="Eksempel på utfylt skjema og resultater">
+        </li>
+      </ol>
     </section>
   </main>
 
