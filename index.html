@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSV budsjettkontroll</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>MyShare admin bidragsplan kontroll</h1>
+      <p>Source code & tutorial:</p>
+    </header>
+
+    <section class="input-grid" aria-label="Datainput">
+      <div class="field">
+        <label for="csvInput">
+          Camp påmeldinger
+          <a href="https://admin.event.bcc.no/admin/insights/1eb488fd-f0fb-4e02-8f72-684b29342bfb" target="_blank" rel="noopener noreferrer">Åpne camp påmeldinger</a>
+        </label>
+        <textarea id="csvInput" spellcheck="false" placeholder="Reference,PersonId,Display,Age,Gender,RegId,Status,Booking Status,Fee,Price"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="budgetInput">
+          MyShare status
+          <a href="https://admin.myshare.today/club/3961/team/10027/clubMembersStatus#" target="_blank" rel="noopener noreferrer">Åpne MyShare status</a>
+        </label>
+        <textarea id="budgetInput" spellcheck="false" placeholder="Person ID;Name;Alder;Ektefelle ID;Status;Totalt bidrag;Totalt budsjettmål;Counted in Aksjon;On Track;On Track previous month"></textarea>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="compareButton" type="button">Sammenlign påmeldinger mot bidragsplan</button>
+      <button id="compareContributionButton" type="button">Sammenlign påmeldinger mot totalt bidrag</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </div>
+
+    <section class="results" aria-label="Sammenligningsresultater">
+      <h2>Resultater</h2>
+      <div id="summary" class="summary"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="personId">Person ID</th>
+              <th data-sort="name">Navn</th>
+              <th id="targetHeader" data-sort="budgetGoal">Bidragsplan</th>
+              <th data-sort="cost">Camp kostnad + gebyr</th>
+              <th data-sort="difference">Differanse</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <tr>
+              <td colspan="5">Ingen sammenligning er kjørt ennå.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
